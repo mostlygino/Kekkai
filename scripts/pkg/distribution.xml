@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Installer layout for Kekkai. scripts/make-pkg.sh fills in __VERSION__. -->
+<installer-gui-script minSpecVersion="2">
+    <title>Kekkai</title>
+    <organization>com.mostlygino</organization>
+    <domains enable_localSystem="true"/>
+    <options customize="never" require-scripts="false" hostArchitectures="arm64,x86_64"/>
+    <volume-check>
+        <allowed-os-versions>
+            <os-version min="26.0"/>
+        </allowed-os-versions>
+    </volume-check>
+    <welcome file="welcome.html" mime-type="text/html"/>
+    <license file="license.txt" mime-type="text/plain"/>
+    <conclusion file="conclusion.html" mime-type="text/html"/>
+    <background file="installer.tiff" alignment="bottomleft" scaling="none"/>
+    <background-darkAqua file="installer-dark.tiff" alignment="bottomleft" scaling="none"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.mostlygino.Kekkai"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.mostlygino.Kekkai" visible="false">
+        <pkg-ref id="com.mostlygino.Kekkai"/>
+    </choice>
+    <pkg-ref id="com.mostlygino.Kekkai" version="__VERSION__" onConclusion="none">Kekkai-component.pkg</pkg-ref>
+</installer-gui-script>

@@ -1,0 +1,22 @@
+name: Feature idea
+description: Suggest something Kekkai could do.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The problem first; the solution can come later.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Kekkai keeps everything on your Mac
+      options:
+        - label: This idea doesn't need to send data off the Mac.
+          required: true

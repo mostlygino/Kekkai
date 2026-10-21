@@ -1,0 +1,17 @@
+{
+  "name": "Kekkai",
+  "eyebrow": "A barrier for your Mac",
+  "tagline": "See which apps talk to the network, and decide which ones may.",
+  "footer": "SUMI · SHU · RIVER STONE",
+  "features": [
+    ["See who connects", "Every app and host, down to a live world map."],
+    ["Draw the line", "Block apps or domains, or approve new ones first."],
+    ["Stay on the Mac", "A system extension. Nothing it sees leaves."]
+  ],
+  "material": {
+    "kind": "stone",
+    "light": ["#e6e2da", "#f9f7f2", "#1d1b19", "#5b5650", "#bcb4a7", "#c5381f"],
+    "dark": ["#121111", "#262321", "#f4f0e9", "#b6aea3", "#4b4541", "#f0563e"]
+  },
+  "icon": "readme-icon.png"
+}

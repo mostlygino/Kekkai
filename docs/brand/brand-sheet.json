@@ -1,0 +1,30 @@
+{
+ "name": "Kekkai",
+ "icon": "kekkai-icon.png",
+ "accent": "#D9412B",
+ "line": [
+  "結界",
+  "けっかい",
+  "barrier"
+ ],
+ "sheet": "In a Japanese garden, a round stone tied with cord and set on a path means \"no further\". Nothing is locked and everyone understands. That is Kekkai: a polite, absolute stop. The raked gravel rings round the stone are the traffic, turned aside. The cord is shu, the one colour Kekkai keeps for the barrier.",
+ "swatches": [
+  [
+   "shu",
+   "#DA201C"
+  ],
+  [
+   "basalt",
+   "#281F1F"
+  ],
+  [
+   "gravel",
+   "#D7CFC7"
+  ],
+  [
+   "sumi",
+   "#353536"
+  ]
+ ],
+ "sheet_out": "kekkai-sheet-sekimori.png"
+}

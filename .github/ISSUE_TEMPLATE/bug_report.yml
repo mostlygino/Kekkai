@@ -1,0 +1,44 @@
+name: Bug report
+description: Something in Kekkai doesn't work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for reporting. For security problems, please use [private reporting](https://github.com/mostlygino/Kekkai/security/advisories/new) instead."
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open Kekkai\n2. …"
+  - type: dropdown
+    id: blocking
+    attributes:
+      label: How does Kekkai run on your Mac?
+      options:
+        - Network filter (signed build)
+        - Watch mode
+        - Watch mode plus System Firewall
+        - Demo mode
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Kekkai and macOS version
+      description: "About Kekkai has a copy button for this (the 刷 Build row)."
+      placeholder: "Kekkai 0.2.0 Beta (build …), macOS 26.1, Apple silicon"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots help. Please blur anything private (hostnames, addresses).
