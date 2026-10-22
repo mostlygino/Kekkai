@@ -39,7 +39,13 @@ Tokens: shu `#D9412B`, basalt `#3A3B40`, gravel `#E7E3D9`, sumi `#141214`.
 
 ## How it is made
 
-**Since 2026-10-21 the app icon is a generated image**, not this renderer's output: the Sekimori stone from [PROMPT.md](PROMPT.md), rendered with an image generator to the standard of Onmitsu and Kuro. `kekkai-icon-master.png` is the original, `kekkai-icon.png` the same object fitted to an 860 px body on a 1024 canvas, which feeds `App/Assets.xcassets/AppIcon.appiconset/`. The renderer below still makes the option sheets; the brand sheet comes from `brand_sheet.py` (text and colours in `brand-sheet.json`, laid out like the renderer's sheet, drawn by headless Chromium).
+**Since 2026-10-21 the app icon is a generated image**, not this renderer's output: the Sekimori stone from [PROMPT.md](PROMPT.md), rendered with an image generator to the standard of Onmitsu and Kuro. `kekkai-icon-master.png` is the original, `kekkai-icon.png` the object cut out on a 1024 canvas. `scripts/fit-icon.swift` fits that onto the macOS icon grid (an 824 px squircle 100 px in, with the system shadow) and writes `App/Assets.xcassets/AppIcon.appiconset/`. Fitted to 860 px, as it was until 2026-10-22, macOS 26 shrank the icon onto a grey plate.
+
+```sh
+swiftc -O scripts/fit-icon.swift -o /tmp/fit-icon
+/tmp/fit-icon docs/brand/kekkai-icon.png App/Assets.xcassets/AppIcon.appiconset
+```
+ The renderer below still makes the option sheets; the brand sheet comes from `brand_sheet.py` (text and colours in `brand-sheet.json`, laid out like the renderer's sheet, drawn by headless Chromium).
 
 `scripts/make-icon.swift` is the same height-field renderer as Kagami and Shīru. Nothing is drawn as a gradient, no SF Symbols are used, and 結界 (on the torii option) is rasterised from the Hiragino Mincho outline; no font is shipped. It replaces the earlier flat hexagon from `scripts/render-icon.swift`.
 
